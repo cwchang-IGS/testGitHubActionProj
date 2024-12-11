@@ -30,6 +30,7 @@ jobs:
         id: build_cocos
         run: |
           #!/bin/bash
+          set +e
           /Applications/CocosCreator/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force  
           status=$?
           echo "exitcode=$status"
