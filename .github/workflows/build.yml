@@ -41,5 +41,5 @@ jobs:
       - name: Build Cocos Creator project failed
         if: steps.build_cocos.outputs.exit_code != 36
         run: |
-          echo "Build failed!"
+          echo "Build failed! Exit code: ${{ steps.build_cocos.outputs.exit_code }}"
           exit 1
