@@ -27,7 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: /Applications/Cocos/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force
+        run: /Applications/CocosCreator/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force  
+      # run: /Applications/Cocos/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
