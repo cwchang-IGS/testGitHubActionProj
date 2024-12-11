@@ -29,8 +29,10 @@ jobs:
       - name: Build Cocos Creator project
         id: build_cocos
         run: |
+          set +e
           /Applications/CocosCreator/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force  
-          echo "exit code: $exitcode"
+          exitcode="$?"
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
           exit "$exitcode"
         continue-on-error: true
         # run: /Applications/Cocos/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force
