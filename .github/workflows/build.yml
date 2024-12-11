@@ -30,7 +30,8 @@ jobs:
         id: build_cocos
         run: |
           /Applications/CocosCreator/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force  
-          echo "::set-output name=exit_code::$?"
+          echo "exit code: $exitcode"
+          exit "$exitcode"
         continue-on-error: true
         # run: /Applications/Cocos/Creator/3.6.2/CocosCreator.app/Contents/MacOS/CocosCreator --project . --build buildConfig/buildConfig_web-mobile.json --force
 
